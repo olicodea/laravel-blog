@@ -9,6 +9,7 @@ class PagesController extends Controller
 {
     public function inicio()
     {
+        $position = "absolute";
         $apps = [
             ["name" => "notas", "descripcion" => "App de notas"],
             ["name" => "noticias", "descripcion" => "App de noticias con API"],
@@ -16,20 +17,22 @@ class PagesController extends Controller
 
         $appsJSON = json_encode($apps);
 
-        return view('apps', compact('apps'));
+        return view('apps', compact('apps', 'position'));
     }
 
     public function notas()
     {
+        $position = "absolute";
         $notas = App\Nota::paginate(5);
-        return view('notas.home', compact('notas'));
+        return view('notas.home', compact('notas', 'position'));
     }
 
     public function detalle($id)
     {
+        $position = "absolute";
         $notas = App\Nota::all();
         $nota = App\Nota::findOrFail($id);
-        return view('notas.detalle', compact('nota', 'notas'));
+        return view('notas.detalle', compact('nota', 'notas', 'position'));
     }
 
     public function crear(Request $request)
@@ -50,8 +53,9 @@ class PagesController extends Controller
 
     public function editar($id)
     {
+        $position = "absolute";
         $nota = App\Nota::findOrFail($id);
-        return view('notas.editar', compact('nota'));
+        return view('notas.editar', compact('nota', 'position'));
     }
 
     public function update(Request $request, $id)
@@ -76,7 +80,7 @@ class PagesController extends Controller
     }
 
     public function noticias()
-    {
-        return view('noticias.noticias', compact('noticias'));
+    {   $position = "";
+        return view('noticias.noticias', compact('noticias', 'position'));
     }
 }

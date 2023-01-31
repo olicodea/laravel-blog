@@ -13,7 +13,7 @@ const mix = require("laravel-mix");
  */
 
 mix
-    .js("resources/js/Noticias/noticias.js", "public/js")
+    .js("resources/js/Noticias/noticias.js", "public/js/noticias.js")
     .react()
     .sass("resources/sass/app.scss", "public/css")
     .sourceMaps(false, "inline-source-map")
