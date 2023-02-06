@@ -18,7 +18,6 @@ mix
     .sass("resources/sass/app.scss", "public/css")
     .sourceMaps(false, "inline-source-map")
     .disableNotifications()
-    .version()
     .options({
         runtimeChunkPath: 'js'
     })

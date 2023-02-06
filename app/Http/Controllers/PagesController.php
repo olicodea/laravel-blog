@@ -83,4 +83,9 @@ class PagesController extends Controller
     {   $position = "";
         return view('noticias.noticias', compact('noticias', 'position'));
     }
+
+    public function bebidas(){
+        $position = "absolute";
+        return view('bebidas.bebidas', compact('bebidas', 'position'));
+    }
 }
