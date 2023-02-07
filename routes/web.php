@@ -28,3 +28,5 @@ Route::put('notas/editar/{id}', 'PagesController@update')->name('notas.update');
 Route::delete('notas/eliminar/{id}', 'PagesController@eliminar')->name('notas.eliminar');
 
 Route::get('/noticias', 'PagesController@noticias')->name('noticias');
+
+Route::get('/fakeStore', 'FakeStoreController@inicio')->name('fakeStore');

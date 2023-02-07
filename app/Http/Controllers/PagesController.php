@@ -13,6 +13,7 @@ class PagesController extends Controller
         $apps = [
             ["name" => "notas", "descripcion" => "App de notas"],
             ["name" => "noticias", "descripcion" => "App de noticias con API"],
+            ["name" => "fakeStore", "descripcion" => "App consumiendo API de Platzi"],
         ];
 
         $appsJSON = json_encode($apps);
